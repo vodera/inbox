@@ -3,7 +3,7 @@ import '../Inbox.css';
 import moment from 'moment'
 
 class Message extends Component {
-  
+
   calculateTimeSince = (date) => {
     let then = moment(date)
     let now = moment()
@@ -40,7 +40,7 @@ class Message extends Component {
           <span>{this.props.indexActiveMessage + 1} of {messages.length}</span>
           <span>{this.calculateTimeSince(timestamp)}</span>
         </div>
-        <h2>{member} applied for a {type} with a total amount of KES {amount.toLocaleString()}</h2>
+        <h2>{member || user} applied for a {type} with a total amount of KES {amount.toLocaleString()}</h2>
       </div>
     );
   }
