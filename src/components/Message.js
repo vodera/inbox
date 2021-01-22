@@ -32,7 +32,7 @@ class Message extends Component {
     }
 
     const message = messages[this.props.indexActiveMessage]
-    const { type, amount, member, info: {dates: {timestamp}} } = message
+    const { type, amount, member, user, info: {dates: {timestamp}} } = message
 
     return (
       <div className="Message">
