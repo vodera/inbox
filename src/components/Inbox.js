@@ -86,7 +86,7 @@ const Inbox = () => {
            {messages.map((message, index) => {    
             return (
          <div 
-        //  className={index === indexActiveMessage ? 'data': 'data active'} 
+         className={index === indexActiveMessage ? 'data': 'data active'} 
          key={index}>
          {index === indexActiveMessage && ( 
          <h2 >{message.member || message.user} applied for a {message.type} with a total amount of KES {message.amount}</h2>
